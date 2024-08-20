@@ -1,76 +1,141 @@
 .pokemon-card-container {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    max-width: 400px;
-    margin: 0 auto;
-  
-    h1.name {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #333;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-  
-    .sprite, img {
-      display: block;
-      margin: 0 auto 1rem;
-      border-radius: 8px;
-      transition: transform 0.3s ease-in-out;
-  
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  
-    .id {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #777;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-  
-    .types {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #555;
-      margin-bottom: 0.5rem;
-    }
-  
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      text-align: left;
-  
-      li {
-        font-size: 0.9rem;
-        color: #666;
-        padding: 0.2rem 0;
-      }
-    }
-  
-    .animation-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1rem;
-  
-      img {
-        height: 150px;
-        width: 150px;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-    }
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+
+  h1.name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
   }
-  
-  mat-spinner {
+
+  .sprite, img {
     display: block;
-    margin: 2rem auto;
-    width: 50px;
-    height: 50px;
+    margin: 0 auto 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
-  
+
+  .id {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #777;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .types {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+
+    li {
+      font-size: 0.9rem;
+      color: #666;
+      padding: 0.2rem 0;
+    }
+  }
+
+  .animation-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    img {
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+}
+
+mat-spinner {
+  display: block;
+  margin: 2rem auto;
+  width: 50px;
+  height: 50px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .pokemon-card-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  h1.name {
+    font-size: 1.5rem;
+  }
+
+  .sprite, img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .id {
+    font-size: 1rem;
+  }
+
+  .types {
+    font-size: 0.9rem;
+  }
+
+  ul li {
+    font-size: 0.8rem;
+  }
+
+  .animation-container img {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-card-container {
+    padding: 0.8rem;
+  }
+
+  h1.name {
+    font-size: 1.2rem;
+  }
+
+  .sprite, img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .id {
+    font-size: 0.9rem;
+  }
+
+  .types {
+    font-size: 0.8rem;
+  }
+
+  ul li {
+    font-size: 0.7rem;
+  }
+
+  .animation-container img {
+    height: 100px;
+    width: 100px;
+  }
+}
