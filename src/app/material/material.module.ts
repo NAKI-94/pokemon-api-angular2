@@ -8,6 +8,10 @@ import { HttpClientModule ,provideHttpClient,withFetch} from '@angular/common/ht
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 @NgModule({
@@ -23,6 +27,9 @@ import { BrowserModule } from '@angular/platform-browser';
     HttpClientModule,
     MatInputModule,
     MatIconModule,
+     RouterModule,
+    MatToolbarModule,
+    MatMenuModule,
     
    
     
@@ -37,6 +44,9 @@ import { BrowserModule } from '@angular/platform-browser';
     HttpClientModule,
     MatInputModule,
     MatIconModule,
+    RouterModule,
+  MatToolbarModule,
+  MatMenuModule,
 
   ]
 })
