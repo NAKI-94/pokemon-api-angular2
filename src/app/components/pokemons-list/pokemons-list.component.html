@@ -1,3 +1,8 @@
+<div class="centered-container">
+  
+  <p *ngIf="!loading() && pokemons().length === 0" class="no-data-message">No se encontraron Pokémon.</p>
+  <button class="random-button" mat-raised-button color="primary" (click)="loadPokemon()">Cargar Pokémon</button>
+</div>
 <div class="pokemon-card-container">
   <div *ngFor="let pokemon of pokemons()" class="pokemon-card" (click)="playSound(pokemon?.cries?.latest); openDialog(pokemon.id)">
     <h1 class="name">{{ pokemon?.species?.name || 'Nombre no disponible' }}</h1>
@@ -24,8 +29,3 @@
   </div>
 </div>
 
-<div class="centered-container">
-  
-  <p *ngIf="!loading() && pokemons().length === 0" class="no-data-message">No se encontraron Pokémon.</p>
-  <button class="random-button" mat-raised-button color="primary" (click)="loadPokemon()">Cargar Pokémon</button>
-</div>

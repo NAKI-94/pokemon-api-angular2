@@ -19,6 +19,7 @@ export default class PokemonsDialogComponent implements OnInit, OnDestroy {
   indiceActual: number = 0;
   animating: boolean = false;
   private animationInterval: any; // Intervalo de animación
+  pokemonImagenActual: string = ''; // Variable para almacenar la imagen actual
 
   constructor(
     private pokemonService: PokemonService,
@@ -68,13 +69,21 @@ export default class PokemonsDialogComponent implements OnInit, OnDestroy {
   iniciarAnimacion() {
     this.indiceActual = 0;
     this.animating = true;
+    this.pokemonImagenActual = this.animationArray[0]; // Inicializar la imagen actual
     this.animateFrames();
   }
 
   animateFrames() {
     if (this.animating) {
       this.animationInterval = setInterval(() => {
-        this.indiceActual = (this.indiceActual + 1) % this.animationArray.length;
+        try {
+          this.indiceActual =
+            (this.indiceActual + 1) % this.animationArray.length;
+          this.pokemonImagenActual = this.animationArray[this.indiceActual]; // Actualizar la imagen actual
+        } catch (error) {
+          this.detenerAnimacion();
+          console.error('Error en la animación:', error);
+        }
       }, 300);
     }
   }
