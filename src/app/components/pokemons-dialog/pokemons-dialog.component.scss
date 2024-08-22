@@ -8,7 +8,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
   // Cambios al hacer hover
   &:hover {
     transform: translateY(-5px);
@@ -57,7 +57,7 @@
     list-style: none;
     padding: 0;
     margin: 0 0 16px 0;
-    
+
     li {
       background-color: #e2e8f0;
       border-radius: 8px;
@@ -80,29 +80,54 @@
   }
 }
 
-// Estilos para pantallas pequeñas
-@media (max-width: 600px) {
+// Estilos responsivos
+@media (max-width: 768px) {
+  .pokemon-card-container {
+    flex-direction: column;
+    margin: 12px;
+    padding: 12px;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .id {
+    font-size: 1.3rem;
+  }
+
+  ul li {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
   .pokemon-card-container {
     margin: 8px;
-    padding: 12px;
+    padding: 10px;
+  }
 
-    .name {
-      font-size: 1.25rem;
-    }
+  .name {
+    font-size: 1.25rem;
+  }
 
-    img {
-      width: 120px;
-      height: 120px;
-    }
+  img {
+    width: 120px;
+    height: 120px;
+  }
 
-    .id, .types, .abilities {
-      font-size: 1rem;
-    }
+  .id {
+    font-size: 1.1rem;
+  }
 
-    ul {
-      li {
-        font-size: 0.875rem;
-      }
-    }
+  ul li {
+    font-size: 0.875rem;
+    padding: 4px 8px;
   }
 }
