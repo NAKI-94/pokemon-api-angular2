@@ -4,7 +4,7 @@
         <div (click)="playSound(pokemon?.cries?.latest)" style="cursor: pointer;" title="Reproducir sonido">
             <h1 class="name">{{ pokemon?.species?.name || 'Nombre no disponible' }}</h1>
 
-
+          <div class="pokemon-info">
             <img [src]="pokemonImagenActual" alt="Imagen de animación" height="150" width="150">
             
             <h2 class="id">N°{{ pokemon?.id || 'Desconocido' }}</h2>
@@ -27,6 +27,8 @@
               </li>
             </ul> 
           </div>
+            
+        </div>
       </div>
 }@else {
     <mat-spinner></mat-spinner>}
